@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:carousel_bug_repro"
+             x:DataType="vm:MainPageViewModel"
+             x:Class="carousel_bug_repro.MainPage">
+
+<CarouselView
+    ItemsSource="{Binding TestItems}"
+    Loop="False">
+    <CarouselView.ItemTemplate>
+        <DataTemplate x:DataType="vm:TestItem">
+            <vm:TestItemView />
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+
+</CarouselView>
+
+</ContentPage>
